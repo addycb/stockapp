@@ -1,6 +1,6 @@
 ######################################
 # Skeleton: Ben Lawson <balawson@bu.edu>
-# Edited by: Addison Baum <atomsk@bu.edu> and Scarlett Li (scartt@bu.edu)
+# Edited by: Addison Baum <atomsk@bu.edu>
 ######################################
 # Some code adapted from
 # CodeHandBook at http://codehandbook.org/python-web-application-development-using-flask-and-mysql/
@@ -8,20 +8,13 @@
 # and Flask Offical Tutorial at  http://flask.pocoo.org/docs/0.10/patterns/fileuploads/
 # see links for further understanding
 ###################################################
-#from datetime import datetime
-#import flask
+#Code template from machinelearningmastery, edited by Addison
 from flask import Flask, request, render_template
-#for image uploading		
 import base64
-#Template from machinelearningmastery, edited by Addison
-# import required modules
 import tkinter as tk
 from tkinter import *
 from PIL import Image
 from PIL import ImageTk
-
-
-# prepare data for lstm
 from pandas import read_csv
 from pandas import DataFrame
 from pandas import concat
@@ -178,15 +171,13 @@ def datas():
 
 @app.route("/stockshow", methods=['POST'])
 def set_comment():
-	#print(request.files)
 	stockpath=request.files.get("myfile")
 	filename=stockpath.filename
 	stockpath.save(filename)
 	pregraph=stockgraphs(filename)
 	RMSE,lossgraph,accgraph=stockpredict(filename)
-	#print(type(pregraph),type(lossgraph))
-	#print(pregraph,lossgraph)
 	return render_template('stockshow.html',pregraph=pregraph,lossgraph=lossgraph,accgraph=accgraph,rmse=0,base64=base64)
+
 if __name__ == "__main__":
 	#this is invoked when in the shell  you run
 	#$ python app.py
