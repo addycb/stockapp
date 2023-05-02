@@ -1,0 +1,135 @@
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+
+.flower{
+  background-image:url(images/aflowerfield.png);
+  background-position-x: center;
+  background-repeat:repeat;
+}
+
+
+.aerial{
+  background-image:url(images/blisslands.png);
+  background-size:50%;
+  background-repeat:repeat
+}
+
+.hands{
+  background-image: url(images/hands.jpg);
+  background-size: cover;
+  background-position-y:10%
+}
+
+
+
+.menu {
+  background-image: url(images/rock.png);
+  overflow:visible
+}
+.menu a {
+  border: 10px solid transparent;
+  padding: 0px;
+  background-color: antiquewhite;
+  color: #000000;
+}
+.menu a:hover {
+  background-color: rgb(245, 105, 12);
+  color: black;
+}
+.menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.menu1 {
+  background-image: url(images/rock.png);
+  overflow:visible
+}
+.menu1 a {
+  border: 10px solid transparent;
+  padding: 0px;
+  background-color: antiquewhite;
+  color: #000000;
+}
+.menu1 a:hover {
+  background-color: rgb(245, 105, 12);
+  color: black;
+}
+.menu1 a.active {
+  background-color: #0cd7e9;
+  color: white;
+}
+
+
+
+.menu2 {
+  background-image: url(images/rock.png);
+  overflow:visible
+}
+.menu2 a {
+  border: 10px solid transparent;
+  padding: 0px;
+  background-color: antiquewhite;
+  color: #000000;
+}
+.menu2 a:hover {
+  background-color: rgb(245, 105, 12);
+  color: black;
+}
+.menu2 a.active {
+  background-color: #000000;
+  color: white;
+}
+
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.green{
+  color: rgb(40, 202, 62);
+}
+
+.rocked{
+  border: 10px solid transparent;
+  padding: 10px;
+  border-image: url("images/rock.png") 30 round;
+ 
+}
+
+.heldtext{
+  top:15%;
+}
+
+.tanbg{
+  background-color: tan;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.landing-title{font-size:26pt;font-family:CircularStd,sans-serif;font-weight:900}

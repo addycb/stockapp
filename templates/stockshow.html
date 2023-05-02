@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="/static/general.css">
+  <title>StockShow</title>
+</head>
+
+<body class="aerial">
+  <div class="menu1 rocked aligncenter">
+{% if pregraph %}
+<div class="card">
+    <ul>
+      <li>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(pregraph).decode("ascii") }}'/></li>
+      </li>
+    </ul>
+</div>
+    {% endif %}    <div class="card">
+      <div class="container">
+        <h4><b style="font-size: 300%">Stock Show</b></h4>
+        <form method="post" enctype="multipart/form-data" action="/stockshow">
+            <input type="file" id="myfile" name="myfile"><br><br>
+          <input type="submit" value="Start" />
+        </form>
+        </a>
+        <p class="rocked tanbg">Upload <a href=/datastandards>clean</a><a href=https://www.kaggle.com/datasets/paultimothymooney/stock-market-data> stock data</a>. See Machine Learning 😍</p>
+      </div>
+     {% if lossgraph %}
+     <div class="card">
+    <ul>
+      <li>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(lossgraph).decode("ascii") }}'/></li>
+      </li>
+    </ul>
+  </div>
+    {% endif %}
+    {% if accgraph %}
+     <div class="card">
+    <ul>
+      <li>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(accgraph).decode("ascii") }}'/></li>
+      </li>
+    </ul>
+  </div>
+    {% endif %}
+  {% if rmse %}
+  <div class="card">
+<p class="rocked tanbg">RMSE, or root mean square deviation, is a good error metric for regression. Learn more about it <a href="https://c3.ai/glossary/data-science/root-mean-square-error-rmse/#:~:text=What%20is%20Root%20Mean%20Square,true%20values%20using%20Euclidean%20distance.">here</a> </p>
+  </div>
+  {% endif %}  
+  </div>
+    
+</body>
+
+</html>
